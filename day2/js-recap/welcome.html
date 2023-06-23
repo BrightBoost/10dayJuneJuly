@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt">Hello world</p>
+    <div id="app"></div>
+    <input type="color" id="color">
+    <button onclick="doMagic()">Click me</button>
+    <script>
+        window.onload = () => {
+            document.getElementById("txt").addEventListener("click", doStuff);
+        }
+        console.log("hello in the console")
+        function doMagic() {
+            let tadaaText = document.getElementById("app");
+            tadaaText.innerText = "Tadaa";
+            tadaaText.style.color = document.getElementById("color").value;
+        }
+
+        function doStuff() {
+            alert("don't touch me!");
+        }
+    </script>
+</body>
+</html>
