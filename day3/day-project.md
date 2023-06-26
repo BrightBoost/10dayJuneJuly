@@ -37,3 +37,16 @@ If you can do this without smaller steps, that's amazing! Just in case, here are
 - Use `document.querySelector` to select your root DOM node and `ReactDOM.createRoot` to create your root React node.
 - When setting inline styles in JSX, you need to use a JavaScript object where the properties are camelCased.
 
+
+**Stretch goals:**
+- Random Color Generator:
+Add a button that, when clicked, sets the color to a random color.
+
+- Favorite Colors:
+Give users the option to mark colors as their favorites. These favorite colors should be displayed in a separate section and should be saved in local storage to persist across page reloads.
+
+- Color Themes:
+Allow users to select multiple colors (at least three) and save them somehow (localstorage?) as a color theme. Users should be able to switch between these saved themes.
+
+- Random Color Generator:
+Add a button that, when clicked, sets the color to a random color.
