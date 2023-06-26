@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Dinosaur Actions App</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        const dinosaurImg = "https://static.vecteezy.com/system/resources/previews/003/672/329/original/cute-dino-hugging-a-love-heart-vector.jpg";
+        const dinosaur = {
+            name: "T-Rex",
+            theme: {
+                backgroundColor: "darkgreen",
+                color: "brown"
+            }
+        };
+
+        function ActionList({ dinosaur, imgSrc }) {
+            const [actions, setActions] = React.useState(JSON.parse(localStorage.getItem("actions")) || ["Eat", "Sleep"]);
+            const [newAction, setNewAction] = React.useState("");
+
+            React.useEffect(() => {
+                localStorage.setItem("actions", JSON.stringify(actions));
+            }, [actions]);
+
+            const addAction = (event) => {
+                event.preventDefault();
+                setActions([...actions, newAction]);
+                setNewAction('');
+            };
+
+            const removeAction = (index) => {
+                const newActions = [...actions];
+                newActions.splice(index, 1);
+                setActions(newActions);
+            };
+
+            return (
+                <div style={dinosaur.theme}>
+                    <h1>{dinosaur.name}'s Actions</h1>
+                    <img
+                        className="theme"
+                        src={imgSrc}
+                        alt={dinosaur.name}
+                        height="200"
+                    />
+                    <form onSubmit={addAction}>
+                        <input type="text" value={newAction} onChange={e => setNewAction(e.target.value)} required />
+                        <button type="submit">Add Action</button>
+                    </form>
+                    <ul>
+                        {actions.map((action, index) =>
+                            <li key={index} onClick={() => removeAction(index)}>{action}</li>
+                        )}
+                    </ul>
+                </div>
+            );
+        }
+
+        const divApp = document.getElementById("app");
+        const root = ReactDOM.createRoot(divApp);
+        root.render(<ActionList dinosaur={dinosaur} imgSrc={dinosaurImg} />)
+    </script>
+</body>
+
+</html>

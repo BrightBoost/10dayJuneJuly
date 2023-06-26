@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        
+        function TodoList({person, imageAlt, imageUrl}) {
+            const [todos, setTodos] = React.useState(["coffee", "more coffee"]);
+            const [newTodo, setNewTodo] = React.useState("");
+
+            const addTodo = (event) => {
+                event.preventDefault();
+                setTodos([...todos, newTodo]);
+                setNewTodo("");
+            };
+
+            return (
+                <div style={person.customStyle}>
+                    <h1>{person.name}'s to do's</h1>
+                    <img src={imageUrl} alt={imageAlt} />
+                    <form onSubmit={addTodo}>
+                        <input type="text" value={newTodo} onChange={e => setNewTodo(e.target.value)} required />
+                        <button type="submit">Add todo</button>
+                    </form>
+                    <ul>
+                        {
+                            todos.map(item =>
+                                <li>{item}</li>
+                            )
+                        }
+                    </ul>
+                </div>
+            );
+        }
+
+        let imageUrl = "bla";
+        let imageAlt = "coffee";
+        let person = {
+            name: "Dino",
+            customStyle: {
+                backgroundColor: "lightyellow",
+                color: "#444444"
+            }
+        }
+
+        let person2 = {
+            name: "Maaike",
+            customStyle: {
+                backgroundColor: "pink",
+                color: "green"
+            }
+        }
+
+        const divApp = document.querySelector("#app");
+        const root = ReactDOM.createRoot(divApp);
+        root.render(
+            <div>
+                <TodoList person={person} imageAlt={imageAlt} imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9oXbqADlBdhbgwDNjZlf35tmhNz4HJ-7yqxoBgyuQ1YqBVsO_bv5fyKhPMpJLW1tq8uM&usqp=CAU" />
+                <TodoList person={person2} imageAlt={imageAlt} imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9oXbqADlBdhbgwDNjZlf35tmhNz4HJ-7yqxoBgyuQ1YqBVsO_bv5fyKhPMpJLW1tq8uM&usqp=CAU" />
+            </div>
+            );
+
+    </script>
+</body>
+
+</html>
