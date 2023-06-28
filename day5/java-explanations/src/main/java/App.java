@@ -28,6 +28,17 @@ public class App {
         System.out.println(account.getUsername());
         account.displayUserAccount();
 
+        // operations
+        String s = "Hi " + "there";
+        boolean b1 = x == 5;
+        int nr = 8;
+        int result = --nr;
+        System.out.println(result);
 
+        // common static methods are on the Math class
+        Math.sqrt(3);
+        // if it wasn't static, we would have to call it like this
+        // Math math = new Math();
+        // math.sqrt(3);
     }
 }
