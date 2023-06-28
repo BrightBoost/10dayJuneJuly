@@ -1,0 +1,22 @@
+Let’s create a simple package and class structure for a bank account application.
+You will create a BankAccount class with a few fields and a Main class to test your implementation.
+
+0. Set up a Java project
+
+1. Create a package named bank.
+
+2. Inside the bank package, create a class named BankAccount with the following fields:
+
+a. accountNumber (int)
+b. accountHolder (String)
+c. balance (double)
+
+3. Create a package named main.
+
+4. Inside the main package, create a class named Main with a main method.
+
+5. Import the BankAccount class by adding this line below “package main”: import bank.BankAccount;
+
+6. In the main method, create a BankAccount object using the new keyword and set some values for the fields.
+
+7. Print all the values of the field to the console to verify your solution.
