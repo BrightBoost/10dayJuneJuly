@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d019c0d-26de-435a-a54a-2199d926fa4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/methods/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/methods/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usingscanner/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/conditionalexecution/IfAndSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/conditionalexecution/IfAndSwitch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/methods/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/methods/DoggyDaycare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +44,7 @@
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.methods.Main">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
-      <module name="java-explanations" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.methods.App">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="usingscanner.Example" />
       <module name="java-explanations" />
@@ -94,6 +84,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="methods.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="methods.App" />
+      <module name="java-explanations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="methods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="methods.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="methods.Main" />
       <module name="java-explanations" />
@@ -109,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.methods.App" />
         <item itemvalue="Application.methods.Main" />
         <item itemvalue="Application.Example" />
         <item itemvalue="Application.IfAndSwitch" />
         <item itemvalue="Application.collectionexplanation.Main" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
