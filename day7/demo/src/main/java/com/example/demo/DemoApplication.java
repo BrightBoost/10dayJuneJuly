@@ -14,8 +14,8 @@ public class DemoApplication {
 			System.out.println(beanName);
 		}
 
-		Person p = (Person) ac.getBean("person");
-		System.out.println(p.getName());
+//		Person p = (Person) ac.getBean("person");
+//		System.out.println(p.getName());
 
 		for(String name : ac.getBeanNamesForType(Person.class)) {
 			System.out.println(name);
