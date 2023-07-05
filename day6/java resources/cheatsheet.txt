@@ -1,0 +1,3 @@
+general: https://www.edureka.co/blog/cheatsheets/java-cheat-sheet/
+collections: https://javaconceptoftheday.com/java-collections-cheat-sheet/
+class and method structure: https://introcs.cs.princeton.edu/java/11cheatsheet/

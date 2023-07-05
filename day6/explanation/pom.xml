@@ -4,6 +4,10 @@
   <groupId>org.example</groupId>
   <artifactId>explanation</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Archetype - java-explanations</name>
+    <packaging>pom</packaging>
+    <name>Archetype - java-explanations</name>
   <url>http://maven.apache.org</url>
+    <modules>
+        <module>untitled</module>
+    </modules>
 </project>

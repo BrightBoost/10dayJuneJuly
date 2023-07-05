@@ -1,2 +1,4 @@
-package exerciseio;public class LyricsHandler {
+package exerciseio;
+
+public class LyricsHandler {
 }

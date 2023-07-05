@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6ba6c7-1f47-419c-ab55-ba22d2a64b91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/someFile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptionsandio/ReadingAndWritingFiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Camel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Predator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Prey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Rabbit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/explaininginterfaces/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exerciseio/LyricsHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../day5/java-explanations/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/java-explanations/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java - Mini-OOP Project No 2 - v1.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java - Mini-OOP Project No 2 - v1.0.docx.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Refresher Java OOP.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercise-exceptions-and-io.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercise-exceptions-and-io.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +47,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "19",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Application.ReadingAndWritingFiles">
