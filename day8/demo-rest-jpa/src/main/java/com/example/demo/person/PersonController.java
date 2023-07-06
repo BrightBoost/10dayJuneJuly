@@ -1,5 +1,8 @@
 package com.example.demo.person;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,6 +12,7 @@ import java.util.List;
 public class PersonController {
     private PersonService personService;
 
+    @Autowired
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
@@ -21,8 +25,8 @@ public class PersonController {
 
     // get by id
     @GetMapping("{id}")
-    public Person getPersonById(@PathVariable long id) {
-        return personService.getById(id);
+    public ResponseEntity<Person> getPersonById(@PathVariable long id) {
+        return new ResponseEntity<>(personService.getById(id), HttpStatus.OK);
     }
 
     // post
