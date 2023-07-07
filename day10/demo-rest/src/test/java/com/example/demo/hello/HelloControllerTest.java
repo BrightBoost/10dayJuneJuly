@@ -1,5 +1,7 @@
 package com.example.demo.hello;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,9 +15,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
 @ExtendWith(SpringExtension.class)
@@ -29,7 +34,8 @@ public class HelloControllerTest {
     private HelloService helloService;
 
     // object mapper
-
+    @Autowired
+    private ObjectMapper objectMapper;
     // set up some data
     private List<Hello> helloList;
 
@@ -56,4 +62,28 @@ public class HelloControllerTest {
             e.printStackTrace();
         }
     }
+
+    // get all
+
+    @Test
+    public void whenGetAll_thenReturnAllHellos() {
+        when(helloService.getAll()).thenReturn(helloList);
+        try {
+
+            mockMvc.perform(get("/hello"))
+                    .andExpect(jsonPath("$", hasSize(3)));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void whenPostWithValidData_thenStatus200() throws Exception {
+        mockMvc.perform(post("/hello")
+                .content(objectMapper.writeValueAsString(new Hello(4, "good afternoon", LocalDate.now())))
+                .contentType("application/json"))
+                .andExpect(status().isOk());
+    }
+
+
 }

@@ -66,14 +66,6 @@ At this point, you should be able to run your tests. Each test should pass if ev
 
 Remember to think about edge cases and potential exceptions. The more robust your tests, the more reliable your code will be.
 
-Here are the imports for the parameterized and repeated tests:
-
-```java
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-import org.junit.jupiter.api.RepeatedTest;
-```
-
 For the assertions and matchers:
 
 ```java
@@ -94,3 +86,12 @@ Test the deposit method with various input amounts and verify that the balance i
 Repeatedly test the withdraw method. This is just an example, as in real-world tests, repeated tests are used in scenarios where tests may fail intermittently, or in performance testing.
  
 Please note that when doing repeated tests, you need to consider that tests are not isolated from each other, so you might need to adjust your `@BeforeEach` or `@AfterEach` setup.
+
+
+Here are the imports for the parameterized and repeated tests:
+
+```java
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.RepeatedTest;
+```
