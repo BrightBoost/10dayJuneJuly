@@ -15,6 +15,12 @@ public class Hello {
     private String description;
     private LocalDate ld;
 
+    public Hello(long id, String description, LocalDate ld) {
+        this.id = id;
+        this.description = description;
+        this.ld = ld;
+    }
+
     public long getId() {
         return id;
     }
