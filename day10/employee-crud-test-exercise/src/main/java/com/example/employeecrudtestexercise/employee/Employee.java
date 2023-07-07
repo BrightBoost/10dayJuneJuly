@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 public class Employee {
@@ -70,5 +71,18 @@ public class Employee {
 
     public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && Double.compare(employee.salary, salary) == 0 && Objects.equals(name, employee.name) && Objects.equals(position, employee.position) && Objects.equals(startDate, employee.startDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, position, salary, startDate);
     }
 }
