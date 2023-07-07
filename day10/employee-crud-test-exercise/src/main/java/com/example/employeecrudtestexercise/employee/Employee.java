@@ -1,5 +1,6 @@
 package com.example.employeecrudtestexercise.employee;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ public class Employee {
     @NonNull
     private String name;
     private String position;
+
     private double salary;
     private LocalDate startDate;
 

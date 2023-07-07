@@ -13,7 +13,7 @@ public class EmployeeControllerTest {
 
 //    Exercise 3: Test Create Employee
 //
-//    Test method: whenCreateEmployeeWithValidData_thenStatus200
+//    Test method: whenCreateEmployeeWithValidData_thenStatus201
 
 
 //    Exercise 4: Test Update Employee
