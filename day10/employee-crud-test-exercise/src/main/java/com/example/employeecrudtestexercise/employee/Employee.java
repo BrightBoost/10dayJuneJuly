@@ -1,5 +1,7 @@
 package com.example.employeecrudtestexercise.employee;
 
+import org.springframework.lang.NonNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,6 +12,7 @@ public class Employee {
     @Id
     @GeneratedValue
     private long id;
+    @NonNull
     private String name;
     private String position;
     private double salary;

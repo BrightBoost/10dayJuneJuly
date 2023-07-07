@@ -1,7 +1,8 @@
 package com.example.employeecrudtestexercise.employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.core.annotation.RepositoryEventHandler;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,28 +15,46 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping
-    public List<Employee> getAllEmployees() {
-        return employeeService.getAll();
+    public ResponseEntity<List<Employee>> getAllEmployees() {
+        List<Employee> employees = employeeService.getAll();
+        return ResponseEntity.ok(employees);
     }
 
     @GetMapping("{id}")
-    public Employee getEmployee(@PathVariable long id) {
-        return employeeService.get(id);
-
+    public ResponseEntity<Employee> getEmployee(@PathVariable long id) {
+        Employee employee = employeeService.get(id);
+        if (employee != null) {
+            return ResponseEntity.ok(employee);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
-    public void createEmployee(@RequestBody Employee employee) {
+    public ResponseEntity<Void> createEmployee(@RequestBody Employee employee) {
         employeeService.create(employee);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("{id}")
-    public void updateEmployee(@RequestBody Employee employee, @PathVariable long id) {
-        employeeService.update(employee, id);
+    public ResponseEntity<Void> updateEmployee(
+            @RequestBody Employee employee,
+            @PathVariable long id) {
+        boolean isUpdated = employeeService.update(employee, id);
+        if (isUpdated) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
-    @DeleteMapping
-    public void deleteEmployee(@RequestBody Employee employee) {
-        employeeService.delete(employee);
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteEmployee(@PathVariable long id) {
+        boolean isDeleted = employeeService.delete(id);
+        if (isDeleted) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
